@@ -13,11 +13,6 @@ jobs:
         git config pull.rebase false
         git pull
         rm -f release.zip
-    - name: Archive Release
-      uses: sailex428/zip-release@master
-      with:
-        filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
     - name: push changes to remote
       run: |
         git add -A
